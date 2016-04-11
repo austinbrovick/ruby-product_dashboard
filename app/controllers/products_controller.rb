@@ -15,6 +15,10 @@ class ProductsController < ApplicationController
   end
 
   def create
+    puts params[:product]
+    puts params[:product][:name]
+    Product.create(name: params[:product][:name], description: params[:product][:description], price: params[:product][:price])
+    redirect_to '/products'
   end
 
   def update
@@ -26,4 +30,5 @@ class ProductsController < ApplicationController
     product.destroy
     redirect_to '/products'
   end
+
 end
