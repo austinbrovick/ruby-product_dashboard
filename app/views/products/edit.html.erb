@@ -15,6 +15,14 @@
                 <li><input type='text' name='product[description]' value='<%= @product.description %>'>
                 <li>Price</li>
                 <li><input type='text' name='product[price]' value='<%= @product.price %>'>
+                <li>Category</li>
+                 <li>
+                    <select name='product[category]'>
+                        <% @categories.each do |c| %>
+                            <option value='<%= c.id %>'><%= c.name %></option>
+                        <% end %>
+                    </select>
+                </li>
                 <li><input type='submit' value='Update'></li>
             </form>
         </ul>
