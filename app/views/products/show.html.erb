@@ -1,2 +1,29 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id='main_wrapper'>
+        <table>
+            <tr>
+                <td><span>Name:</span></td>
+                <td><%= @product.name %></td>
+            </tr>
+            <tr>
+                <td><span>Description:</span></td>
+                <td><%= @product.description %></td>
+            </tr>
+            <tr>
+                <td><span>Price:</span></td>
+                <td><%= @product.price %></td>
+            </tr>
+        </table>
+        <a href='/products'>Back</a><br />
+        <a href='/products/<%= @product.id %>/edit'>Edit</a>
+
+    </div>
+</body>
+
+
+</html>

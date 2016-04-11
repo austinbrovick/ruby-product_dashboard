@@ -18,8 +18,8 @@
                     <td><%= p.price %></td>
                     <td><%= p.description %></td>
                     <td>
-                        <a href='/products/show'>Show</a>   |
-                        <a href='/products/<%= p.id %>'>Edit</a>   |
+                        <a href='/products/<%= p.id %>'>Show</a>   |
+                        <a href='/products/<%= p.id %>/edit'>Edit</a>   |
                         <form method='post' action='products/<%= p.id %>' class='destroyButtonForm'>
                             <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
                             <input type='submit' value='Destroy' class='destroyButton'>
