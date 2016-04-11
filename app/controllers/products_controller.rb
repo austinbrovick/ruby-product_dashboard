@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
     puts params[:id]
     puts "$$" * 50
     @product = Product.find(params[:id])
+    @comments = Comment.where(product: @product)
   end
 
   def new

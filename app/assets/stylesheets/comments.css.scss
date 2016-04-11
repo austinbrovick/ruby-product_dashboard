@@ -1,0 +1,19 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main_wrapper {
+    width: 550px;
+    margin: auto;
+}
+
+td, th {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+table {
+  border: 3px solid black;
+}
