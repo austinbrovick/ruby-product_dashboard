@@ -1,2 +1,36 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id='main_wrapper'>
+        <h1>Listing Products</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <% @products.each do |p| %>
+                <tr>
+                    <td><%= p.name %></td>
+                    <td><%= p.price %></td>
+                    <td><%= p.description %></td>
+                    <td>
+                        <a href='/products/show'>Show</a>   |
+                        <a href='/products/<%= p.id %>'>Edit</a>   |
+                        <form method='post' action='products/<%= p.id %>' class='destroyButtonForm'>
+                            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                            <input type='submit' value='Destroy' class='destroyButton'>
+                        </form>
+                    </td>
+                </tr>
+            <% end %>
+
+        </table>
+    </div>
+</body>
+
+
+</html>
