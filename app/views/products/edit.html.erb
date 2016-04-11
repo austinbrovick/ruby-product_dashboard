@@ -1,2 +1,27 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id='main_wrapper'>
+        <ul>
+            <form method='post' action='/products/<%= @product.id %>'>
+                <input type="hidden"name="_method"value="patch">
+                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <li>Name</li>
+                <li><input type='text' name='product[name]' value='<%= @product.name %>'>
+                <li>Description</li>
+                <li><input type='text' name='product[description]' value='<%= @product.description %>'>
+                <li>Price</li>
+                <li><input type='text' name='product[price]' value='<%= @product.price %>'>
+                <li><input type='submit' value='Update'></li>
+            </form>
+        </ul>
+        <a href='/products'>Back</a>
+        <a href='/products/<%= @product.id %>'>Show</a>
+    </div>
+</body>
+
+
+</html>
